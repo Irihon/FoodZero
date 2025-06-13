@@ -54,7 +54,7 @@
             <div class="grid-container">
                 <div class="grid-x grid-margin-x">
                     <?php if (!empty($hero_section_content)): ?>
-                        <div class="cell small-12 medium-10">
+                        <div class="cell small-12">
                             <div class="hero-section__content">
                                 <?php echo ($hero_section_content) ?>
                             </div>
@@ -275,7 +275,6 @@
                                 </div>
                                 <div class="latest-posts__card-content">
                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <hr class="dotted-divider">
                                     <div class="latest-posts__card-fs">
                                         <?php
                                         $content = get_the_content();

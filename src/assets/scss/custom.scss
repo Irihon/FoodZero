@@ -1,6 +1,5 @@
 // Import Foundation CSS
 @import '~foundation-sites/dist/css/foundation.min.css';
-@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rufina:wght@700&display=swap');
 
 * {
@@ -29,6 +28,10 @@ h2 {
   font-size: 108px;
   font-weight: bold;
   line-height: 120px;
+
+  @media screen and (max-width:576px) {
+    font-size: 78px;
+  }
 }
 
 h4 {
@@ -50,7 +53,7 @@ p {
 
 body {
   position: relative;
-  background-color: $primary-color;
+  background-color: #233000;
 }
 
 .grid-container {
@@ -63,6 +66,20 @@ header {
   width: 100%;
   height: fit-content;
   padding: 1rem 0;
+
+  .logo {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    img {
+      @media screen and (max-width:576px) {
+        max-width: 207px;
+      }
+    }
+  }
 }
 
 .menu-overlay {
@@ -142,6 +159,16 @@ header {
   color: #0000;
 }
 
+.menu__icon {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width:576px) {
+    margin-bottom: 30px;
+  }
+}
 
 .custom-menu {
   a {
@@ -152,6 +179,14 @@ header {
     &:hover {
       transform: scale(1.1);
     }
+
+    @media screen and (max-width: 768px) {
+      padding: 20px 16px;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    justify-content: center;
   }
 }
 
@@ -165,6 +200,10 @@ header {
 
     &:hover {
       transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 20px 26px;
     }
   }
 }
@@ -180,6 +219,21 @@ header {
       right: 138px;
       z-index: 0;
       max-width: 792px;
+
+      @media screen and (max-width:1200px) {
+        max-width: 500px;
+        right: 9%;
+        top: 8%;
+      }
+
+      @media screen and (max-width: 992px) {
+        right: 1%;
+        top: 9%;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -193,6 +247,15 @@ header {
       font-size: 148px;
       line-height: 152px;
       color: white;
+
+      @media screen and (max-width:1200px) {
+        font-size: 100px;
+        line-height: normal;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 90px;
+      }
     }
 
     p {
@@ -200,6 +263,19 @@ header {
       color: white;
       font-size: 24px;
       max-width: 565px;
+
+      @media screen and (max-width: 992px) {
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: 768px) {
+        max-width: fit-content;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 50px;
     }
   }
 
@@ -214,6 +290,15 @@ header {
     img {
       max-width: 250px;
     }
+
+    @media screen and (max-width:1200px) {
+      top: 25%;
+      right: 5%;
+    }
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
   }
 
   .hero-scroll {
@@ -222,6 +307,10 @@ header {
       margin-top: 50px;
       color: white;
       font-size: 48px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 
@@ -235,6 +324,14 @@ header {
     margin-bottom: 150px;
     margin-left: 28px;
     margin-top: 18px;
+
+    @media screen and (max-width:1200px) {
+      height: 367px;
+    }
+
+    @media screen and (max-width: 992px) {
+      height: 167px;
+    }
   }
 
   .hero-image__left {
@@ -244,12 +341,24 @@ header {
       color: white;
       font-size: 68px;
       max-width: 493px;
+
+      @media screen and (max-width:1200px) {
+        line-height: normal;
+      }
+
+      @media screen and (max-width:576px) {
+        max-width: none;
+      }
     }
 
     p {
       font-size: 24px;
       color: white;
       max-width: 565px;
+    }
+
+    @media screen and (max-width:576px) {
+      text-align: center;
     }
   }
 
@@ -263,6 +372,17 @@ header {
       font-size: 24px;
       color: white;
       max-width: 508px;
+
+      @media screen and (max-width:576px) {
+        max-width: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width:576px) {
+      align-items: center;
+      text-align: center;
     }
 
   }
@@ -271,11 +391,20 @@ header {
 .menu-section {
   padding-block: 164px 218px;
   background-color: white;
+  position: relative;
 
   .menu-sticker {
     position: absolute;
-    top: 2883px;
+    top: 0;
     right: 0;
+
+    @media screen and (max-width: 992px) {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width:576px) {
+      display: none;
+    }
   }
 
   &__content {
@@ -291,6 +420,10 @@ header {
       color: #4D4D4D;
       max-width: 532px;
       margin-bottom: 158px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -317,12 +450,30 @@ header {
       line-height: 84px;
       margin-bottom: 24px;
       margin-top: 24px;
+
+      @media screen and (max-width:1200px) {
+        font-size: 48px;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 38px;
+        line-height: normal;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
     }
 
     p {
       font-size: 24px;
       color: #4D4D4D;
       margin-bottom: 108px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 58px;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -335,8 +486,25 @@ header {
     max-width: 649px;
     padding-left: 61px;
 
+    @media screen and (max-width: 992px) {
+      padding: 0%;
+    }
+
     h2 {
       margin-bottom: 18px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 78px;
+        line-height: normal;
+      }
+
+      @media screen and (max-width:576px) {
+        margin-top: 40px;
+      }
+    }
+
+    @media screen and (max-width:576px) {
+      text-align: center;
     }
   }
 }
@@ -359,6 +527,16 @@ header {
 
       img {
         margin: 38px;
+
+        @media screen and (max-width: 768px) {
+          margin: 15px;
+          max-width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 160px;
+        height: 160px;
       }
     }
 
@@ -367,6 +545,24 @@ header {
 
       h4 {
         margin-bottom: 39px;
+
+        @media screen and (max-width:1200px) {
+          font-size: 38px;
+        }
+
+        @media screen and (max-width: 992px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 768px) {
+          line-height: normal;
+        }
+      }
+
+      p {
+        @media screen and (max-width:576px) {
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -398,6 +594,11 @@ header {
     &:hover {
       transform: scale(1.1);
     }
+
+    @media screen and (max-width: 768px) {
+      padding: 7px 23px;
+      font-size: 16px;
+    }
   }
 
   &__card {
@@ -408,13 +609,18 @@ header {
 
     &-data {
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 14px;
-      padding-left: 72px;
       margin-bottom: 48px;
 
       img {
         border-radius: 50%;
+
+        @media screen and (max-width: 768px) {
+          width: 30px;
+          height: 30px;
+        }
       }
 
       span {
@@ -422,18 +628,29 @@ header {
         font-family: "Lato", sans-serif;
         font-size: 18px;
         letter-spacing: 2%;
+
+        @media screen and (max-width: 992px) {
+          font-size: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        gap: 10px;
       }
     }
 
-    .dotted-divider {
-      border: none;
-      border-top: 4px dotted #000;
-      /* Change color and thickness as needed */
-      margin: 20px 0;
-    }
-
     &-content {
-      padding-left: 72px;
+      h4 {
+        border-bottom: 4px dotted #000;
+
+        @media screen and (max-width:1200px) {
+          font-size: 38px;
+        }
+      }
 
       a {
         color: #000;
@@ -458,7 +675,6 @@ header {
 
   .read-more {
     margin-top: 46px;
-    padding-left: 72px;
 
     a {
       font-size: 24px;
@@ -477,6 +693,10 @@ header {
         margin-left: 8px;
 
       }
+    }
+
+    @media screen and (max-width:576px) {
+      margin-bottom: 50px;
     }
   }
 }
@@ -564,6 +784,19 @@ header {
     color: #000;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
+
+    @media screen and (max-width: 992px) {
+      max-height: 510px;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-height: 310px;
+    }
+
+    @media screen and (max-width:576px) {
+      max-height: 710px;
+      margin-bottom: 50px;
+    }
   }
 
   .menu-category-tile:hover {
@@ -578,8 +811,12 @@ header {
     font-size: 48px;
     font-family: "Rufina", sans-serif;
     z-index: 2;
-  }
 
+    @media screen and (max-width: 992px) {
+      padding: 10px 18px;
+      font-size: 38px;
+    }
+  }
 }
 
 .testimonial-section {
@@ -593,6 +830,18 @@ header {
       color: #000;
       font-family: "Rufina", serif;
       margin-bottom: 86px;
+
+      @media screen and (max-width:1200px) {
+        font-size: 38px;
+      }
+
+      @media screen and (max-width:992px) {
+        font-size: 28px;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -606,6 +855,17 @@ header {
     display: flex;
     align-items: center;
     gap: 60px;
+
+    img {
+      @media screen and (max-width: 992px) {
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      gap: 30px;
+    }
   }
 
   .name {
@@ -628,6 +888,21 @@ header {
     span {
       cursor: pointer;
       font-size: 48px;
+
+      @media screen and (max-width:1200px) {
+        font-size: 38px;
+      }
+
+      @media screen and (max-width:992px) {
+        font-size: 28px;
+      }
+    }
+
+    .slide-counter {
+      @media screen and (max-width:992px) {
+        display: inline-flex;
+        gap: 5px;
+      }
     }
   }
 }
@@ -639,6 +914,16 @@ header {
     color: white;
     margin-bottom: 55px;
     font-size: 32px;
+  }
+
+  .logo {
+
+    img {
+      @media screen and (max-width:576px) {
+        width: 207px;
+        margin-bottom: 30px;
+      }
+    }
   }
 
   .email-form {
@@ -657,6 +942,10 @@ header {
       margin: 0;
       height: 100%;
       max-height: 96px;
+
+      @media screen and (max-width:992px) {
+        padding: 20px 20px;
+      }
     }
 
     .form-btn {
@@ -670,6 +959,11 @@ header {
 
       &:hover {
         transform: scale(1.1);
+      }
+
+      @media screen and (max-width:992px) {
+        padding: 20px 20px;
+        font-size: 22px;
       }
     }
 
@@ -715,6 +1009,11 @@ header {
   display: flex;
   gap: 28px;
   justify-content: end;
+
+  @media screen and (max-width:576px) {
+    justify-content: center;
+    margin-top: 50px;
+  }
 
   li {
     list-style: none;

@@ -19,8 +19,8 @@
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="cell small-12 medium-4">
-                    <div data-responsive-toggle="menu" data-hide-for="xxxlarge">
+                <div class="cell small-12 medium-3">
+                    <div data-responsive-toggle="menu" data-hide-for="xxxlarge" class="menu__icon">
                         <button class="menu-icon" type="button" data-toggle="menu"></button>
                     </div>
                     <div class="site-menu menu-overlay" id="menu">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cell small-12 medium-4">
+                <div class="cell small-12 medium-5">
                     <div class="custom-menu menu align-right">
                         <?php wp_nav_menu(array(
                             'menu_class' => 'menu',
