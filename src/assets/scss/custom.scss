@@ -1,6 +1,7 @@
 // Import Foundation CSS
 @import '~foundation-sites/dist/css/foundation.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rufina:wght@700&display=swap');
+@import 'template-menu';
 
 * {
   margin: 0;
@@ -61,11 +62,19 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   left: 0;
   width: 100%;
   height: fit-content;
   padding: 1rem 0;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
 
   .logo {
     @media screen and (max-width: 576px) {
@@ -209,13 +218,13 @@ header {
 }
 
 .hero-section {
-  padding-block: 102px 222px;
+  padding-block: 310px 222px;
   position: relative;
 
   &__image {
     img {
       position: absolute;
-      top: 226px;
+      top: 434px;
       right: 138px;
       z-index: 0;
       max-width: 792px;
@@ -240,7 +249,6 @@ header {
   &__content {
     position: relative;
     max-width: 1057px;
-    z-index: 1;
 
     h1 {
       font-weight: bold;

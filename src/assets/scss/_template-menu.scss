@@ -1,0 +1,66 @@
+.menu-hero__section {
+    padding-block: 208px 328px;
+
+    .menu-hero__section-content {
+        h1 {
+            color: white;
+            font-size: 148px;
+            width: 100%;
+            max-width: 779px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            color: white;
+            font-size: 32px;
+            font-family: "Rufina", sans-serif;
+        }
+    }
+}
+
+.menu-posts__section {
+    background-color: white;
+    padding-block: 122px 208px;
+
+    &-content {
+        text-align: center;
+    }
+
+    &-title {
+        font-size: 108px;
+        font-family: "Rufina", sans-serif;
+    }
+
+    &-description {
+        color: #4D4D4D;
+        font-size: 24px;
+        margin-bottom: 81px;
+    }
+
+    &-img {
+        img {
+            width: 100%;
+            max-width: 792px;
+            margin-bottom: 140px;
+        }
+    }
+
+    &-price {
+        text-align: end;
+        font-size: 48px;
+        font-family: "Rufina", sans-serif;
+    }
+
+    &-dish{
+        h2{
+            font-size: 68px;
+            font-family: "Rufina", sans-serif;
+            line-height: 84px;
+        }
+    }
+
+    hr{
+        border-bottom: dotted 2px black;
+        margin: 12px 0 24px 0;
+    }
+}

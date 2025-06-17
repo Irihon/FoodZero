@@ -26,7 +26,7 @@
     $advantages_section_card_2 = get_field('advantages_section_card_2');
     $advantages_section_card_3 = get_field('advantages_section_card_3');
 
-    $reservation_section_content = get_field('reservation_section_content');
+
 
     $categories_section_content = get_field('categories_section_content');
 
@@ -296,47 +296,8 @@
         </div>
     </section>
 
-    <?php if (!empty($reservation_section_content)) : ?>
-        <section class="reservation-section">
-            <div class="grid-container">
-                <div class="grid-x grid-margin-x">
-                    <?php if (!empty($reservation_section_content)) : ?>
-                        <div class="cell small-12">
-                            <div class="reservation-section__content">
-                                <?php echo ($reservation_section_content) ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                </div>
-                <form action="#" class="reservation-section__form">
-                    <div class="grid-container">
-                        <div class="grid-x grid-padding-x">
-                            <div class="cell medium-4">
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                            <div class="cell medium-4">
-                                <input type="time" id="time" name="time" required>
-                            </div>
-                            <div class="cell medium-4">
-                                <select id="option" name="option" required>
-                                    <option value="">-- Please choose --</option>
-                                    <option value="option1">Option 1</option>
-                                    <option value="option2">Option 2</option>
-                                    <option value="option3">Option 3</option>
-                                </select>
-                            </div>
-                            <div class="cell">
-                                <div class="button-wrapper">
-                                    <input type="submit" class="form-button" value="Book Now">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-    <?php endif; ?>
+    <?php get_template_part('template-parts/section', 'reservation');
+    ?>
 
     <?php if (!empty($categories_section_content)): ?>
         <section class="categories-section">
@@ -355,6 +316,7 @@
                     'hide_empty' => false,
                     'orderby'    => 'id',
                     'order'      => 'ASC',
+                    'number'     => 3,
                 ]);
 
                 if (!empty($terms) && !is_wp_error($terms)) : ?>
@@ -394,7 +356,7 @@
             );
             $slider_query = new WP_Query($args);
             if ($slider_query->have_posts()) :
-            $count = 0;
+                $count = 0;
             ?>
                 <div class="swiper testimonial-swiper">
                     <div class="swiper-wrapper">
@@ -436,7 +398,7 @@
                                 &larr;
                             </span>
                         </div>
-                        
+
                         <div class="slide-counter">
                             <span class="current-slide">1</span> / <span><?php echo count($args); ?></span>
                         </div>

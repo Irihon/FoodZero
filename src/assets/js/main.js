@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgerIcon = document.querySelector(".menu-icon");
     const menuOverlay = document.querySelector(".menu-overlay");
     const closeMenu = document.querySelector(".close-menu");
+    const header = document.querySelector('header'); // adjust this selector!
+
+    if (header) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
     // Open Menu
     burgerIcon.addEventListener("click", function () {
@@ -30,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
