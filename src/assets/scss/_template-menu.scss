@@ -51,15 +51,28 @@
         font-family: "Rufina", sans-serif;
     }
 
-    &-dish{
-        h2{
+    &-dish {
+        h2 {
             font-size: 68px;
             font-family: "Rufina", sans-serif;
             line-height: 84px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 48px;
+            }
+
+            @media screen and (max-width: 992px) {
+                font-size: 38px;
+                line-height: normal;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+            }
         }
     }
 
-    hr{
+    hr {
         border-bottom: dotted 2px black;
         margin: 12px 0 24px 0;
     }

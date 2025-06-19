@@ -79,6 +79,24 @@ function foodzero_customize_register($wp_customize)
         'section' => 'menu_background_section', // You can change this if you want it in a separate section
         'settings' => 'menu_section_bg_image',
     )));
+
+    // Contact Page Background Section
+    $wp_customize->add_section('contact_background_section', array(
+        'title' => __('Contact Page Background', 'foodzero'),
+        'description' => __('Customize the Contact page background', 'foodzero'),
+        'priority' => 31,
+    ));
+
+    $wp_customize->add_setting('contact_page_bg_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_page_bg_image', array(
+        'label' => __('Contact Page Background Image', 'foodzero'),
+        'section' => 'contact_background_section',
+        'settings' => 'contact_page_bg_image',
+    )));
 }
 add_action('customize_register', 'foodzero_customize_register');
 
