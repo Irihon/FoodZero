@@ -99,7 +99,7 @@ $bg_image = get_theme_mod('contact_page_bg_image');
                     </div>
                 </div>
 
-                <form class="contact__reservation-section__form" action="/contact.php" target="_blank">
+                <form class="contact__reservation-section__form" action="" target="_blank">
                     <div class="grid-container">
                         <div class="grid-x grid-padding-x align-center">
                             <div class="medium-6 cell">

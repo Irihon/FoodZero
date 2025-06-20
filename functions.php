@@ -97,6 +97,24 @@ function foodzero_customize_register($wp_customize)
         'section' => 'contact_background_section',
         'settings' => 'contact_page_bg_image',
     )));
+
+    // About Page Background Section
+    $wp_customize->add_section('about_background_section', array(
+        'title' => __('About Page Background', 'foodzero'),
+        'description' => __('Customize the About page background', 'foodzero'),
+        'priority' => 41,
+    ));
+
+    $wp_customize->add_setting('about_page_bg_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_page_bg_image', array(
+        'label' => __('About Page Background Image', 'foodzero'),
+        'section' => 'about_background_section',
+        'settings' => 'about_page_bg_image',
+    )));
 }
 add_action('customize_register', 'foodzero_customize_register');
 
