@@ -17,6 +17,16 @@
     padding-block: 218px 117px;
     background-color: white;
     position: relative;
+
+    &__stiker{
+        position: absolute;
+        top: 94px;
+        left: 651px;
+    }
+
+    p{
+        margin-bottom: 94px;
+    }
 }
 
 .about__staff-section {
@@ -84,17 +94,90 @@
     background: linear-gradient((0deg, rgba(35, 48, 0, 0.6), rgba(35, 48, 0, 0.6))), url(../images/about-video-bg.png);
     color: white;
 
-    h2{
+    h2 {
         margin-bottom: 18px;
     }
 
-    p{
+    p {
         color: white;
         margin-bottom: 82px;
     }
 
-    .play-button{
+    .play-button {
         width: 100%;
         max-width: 134px;
+    }
+}
+
+.about__process-section {
+    background-color: white;
+    padding-block: 267px 320px;
+    position: relative;
+
+    h2 {
+        font-size: 88px;
+    }
+
+    &__stikers {
+        &-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        &-2{
+            position: absolute;
+            bottom: 33px;
+            left: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 174px;
+
+        h2 {
+            font-size: 108px;
+        }
+    }
+
+    &__left-column {
+        h2 {
+            margin-top: 272px;
+        }
+
+        p {
+            margin-top: 28px;
+            margin-bottom: 46px;
+            max-width: 625px;
+        }
+    }
+
+    &__right-column {
+        h2 {
+            margin-top: 155px;
+            margin-bottom: 28px;
+        }
+
+        p {
+            max-width: 616px;
+            margin-bottom: 297px;
+        }
+
+        .about__process-section__image {
+            display: flex;
+            justify-content: end;
+        }
+
+        .right-bottom-content {
+            margin-top: 46px;
+            max-width: 428px;
+            margin-left: auto;
+            margin-right: auto;
+
+            h2 {
+                margin-top: 0;
+            }
+        }
     }
 }
