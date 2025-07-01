@@ -36,6 +36,7 @@ $bg_image = get_theme_mod('menu_section_bg_image');
                 'hide_empty' => true,
                 'orderby'    => 'id',
                 'order'      => 'ASC',
+                'number'     => 3,
             ]); ?>
 
             <?php if (!empty($terms) && !is_wp_error($terms)):

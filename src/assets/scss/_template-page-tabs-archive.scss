@@ -1,0 +1,96 @@
+.portfolio__hero-section {
+    padding-block: 356px 446px;
+
+    h1 {
+        color: white;
+        font-size: 108px;
+    }
+}
+
+.portfolio__grids-section {
+    background-color: white;
+    padding-block: 120px 110px;
+
+    .tab-container {
+        ul {
+            gap: 48px;
+            margin-bottom: 48px;
+
+            .is-active {
+                border-bottom: 4px dotted black;
+            }
+
+            li {
+                a {
+                    color: black;
+                    background-color: transparent;
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
+    .post-thumbnail-link {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        height: 990px;
+        position: relative;
+        margin-bottom: 60px;
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(7, 7, 7, 0.2) 68%);
+            color: #fff;
+            padding: 0 42px 64px;
+
+            h3 {
+                font-size: 48px;
+            }
+
+            .tab-post-terms {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 18px;
+            }
+
+            .secondary {
+                background: transparent;
+                font-size: 24px;
+            }
+
+            .dot {
+                height: 4px;
+                width: 4px;
+                background-color: white;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .arrow {
+                display: inline-block;
+                width: 48px;
+                height: 28px;
+                font-size: 48px;
+                /* Makes the arrow big inside the box */
+                font-weight: bolder;
+                line-height: 28px;
+                text-align: center;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .posts-button{
+        padding: 10px 40px;
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        border: 1px solid black;
+        color: black;
+        background-color: transparent;
+    }
+
+
+}

@@ -327,7 +327,7 @@
                             $term_link = get_term_link($term);
                         ?>
                             <div class="cell small-12 medium-4">
-                                <a href="<?php echo esc_url($term_link); ?>"
+                                <a href="<?php echo site_url('/portfolio-page/'); ?>"
                                     class="menu-category-tile"
                                     style="background-image: url('<?php echo $bg_url; ?>');">
                                     <div class="menu-category-title">

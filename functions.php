@@ -115,6 +115,24 @@ function foodzero_customize_register($wp_customize)
         'section' => 'about_background_section',
         'settings' => 'about_page_bg_image',
     )));
+
+    // Portfolio Page Background Section
+    $wp_customize->add_section('portfolio_background_section', array(
+        'title' => __('Portfolio Page Background', 'foodzero'),
+        'description' => __('Customize the Portfolio page background', 'foodzero'),
+        'priority' => 51,
+    ));
+
+    $wp_customize->add_setting('portfolio_page_bg_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'portfolio_page_bg_image', array(
+        'label' => __('Portfoloi Page Background Image', 'foodzero'),
+        'section' => 'portfolio_background_section',
+        'settings' => 'portfolio_page_bg_image',
+    )));
 }
 add_action('customize_register', 'foodzero_customize_register');
 
