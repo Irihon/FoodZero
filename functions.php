@@ -133,6 +133,24 @@ function foodzero_customize_register($wp_customize)
         'section' => 'portfolio_background_section',
         'settings' => 'portfolio_page_bg_image',
     )));
+
+    // Single Portfolio Page Background Section
+    $wp_customize->add_section('single_portfolio_background_section', array(
+        'title' => __('Single Portfolio Page Background', 'foodzero'),
+        'description' => __('Customize the Single Portfolio page background', 'foodzero'),
+        'priority' => 61,
+    ));
+
+    $wp_customize->add_setting('single_portfolio_page_bg_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'single_portfolio_page_bg_image', array(
+        'label' => __('Single Portfoloi Page Background Image', 'foodzero'),
+        'section' => 'single_portfolio_background_section',
+        'settings' => 'single_portfolio_page_bg_image',
+    )));
 }
 add_action('customize_register', 'foodzero_customize_register');
 

@@ -1,0 +1,86 @@
+.single-menu-item__hero-section {
+    padding-block: 356px 446px;
+
+    &-title {
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 108px;
+        }
+    }
+}
+
+.single-menu-item__post-section {
+    padding-block: 176px 222px;
+    background-color: white;
+
+    &__content-one {
+        max-width: 510px;
+    }
+
+    &__image-one {
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__image-two {
+        margin-top: -123px;
+        display: flex;
+        justify-content: end;
+    }
+
+    &__content-two {
+        margin-bottom: 138px;
+    }
+
+    &__content-three {
+        margin-top: 198px;
+        margin-bottom: 122px;
+        max-width: 509px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    &__image-three {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            max-width: 1360px;
+        }
+    }
+
+}
+
+.single-menu-item__pagination {
+    padding-block: 118px 140px;
+    background-color: #EBF0E4;
+
+    .pagination-title {
+        font-size: 20px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        h5 {
+            font-size: 32px;
+        }
+
+        .pagination-arrow {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

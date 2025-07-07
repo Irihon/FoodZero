@@ -5,6 +5,7 @@
 @import 'template-contact';
 @import 'template-about';
 @import 'template-page-tabs-archive';
+@import 'template-single-menu-item';
 
 * {
   margin: 0;
@@ -70,7 +71,7 @@ header {
   width: 100%;
   height: fit-content;
   padding: 1rem 0;
-  z-index: 1;
+  z-index: 999;
   transition: background-color 0.3s ease;
 
   &.scrolled {
